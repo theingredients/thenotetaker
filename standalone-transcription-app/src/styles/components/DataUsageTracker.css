@@ -1,0 +1,36 @@
+.data-usage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  background: #fff;
+}
+
+.data-usage__label {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.data-usage__value {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.data-usage--safe {
+  border-color: rgba(26, 147, 111, 0.4);
+}
+
+.data-usage--warning {
+  border-color: rgba(245, 165, 36, 0.6);
+}
+
+.data-usage--danger {
+  border-color: rgba(211, 69, 91, 0.5);
+  background: rgba(211, 69, 91, 0.05);
+}

@@ -1,0 +1,99 @@
+.speech-transcriber {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.speech-transcriber__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.speech-transcriber__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.speech-transcriber__select {
+  width: 220px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+.speech-transcriber__status {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.speech-transcriber__transcript {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.speech-transcriber__counts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.speech-transcriber__final {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.speech-transcriber__interim {
+  margin: 12px 0 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.speech-transcriber__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.speech-transcriber__translation {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+  background: #fff;
+}
+
+.speech-transcriber__translation-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.speech-transcriber__translated {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.speech-transcriber__notice {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 8px 0 0;
+}
+
+.speech-transcriber__error {
+  color: var(--danger);
+  font-weight: 600;
+  margin: 0;
+}
