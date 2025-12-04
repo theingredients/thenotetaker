@@ -221,6 +221,44 @@ body {
   margin-top: 16px;
 }
 
+.app__footer {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.app__footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.app__footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 150ms ease;
+}
+
+.app__footer-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.app__footer-link:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.app__footer-separator {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
   .app__header {
     flex-direction: column;
@@ -233,5 +271,10 @@ body {
 
   .app__mode-selector {
     flex-direction: column;
+  }
+
+  .app__footer {
+    margin-top: 48px;
+    padding-top: 24px;
   }
 }

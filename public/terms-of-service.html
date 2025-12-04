@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - The Note Taker</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .important {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            font-family: inherit;
+        }
+        .back-button:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+        }
+        .back-button:active {
+            transform: translateY(0);
+        }
+        .back-button:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+        .back-button__text {
+            display: inline;
+        }
+        .back-button__icon {
+            display: none;
+            font-size: 20px;
+            line-height: 1;
+        }
+        @media (max-width: 768px) {
+            .back-button {
+                top: 15px;
+                right: 15px;
+                padding: 10px 14px;
+                min-width: 44px;
+                min-height: 44px;
+            }
+            .back-button__text {
+                display: none;
+            }
+            .back-button__icon {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()" aria-label="Go back to main page">
+        <span class="back-button__text">← Back</span>
+        <span class="back-button__icon" aria-hidden="true">×</span>
+    </button>
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last Updated: <span id="last-updated-date"></span></p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing and using The Note Taker ("the Service," "we," "our," or "us"), you accept and agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the Service.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>The Note Taker is a standalone web application that provides real-time and on-demand transcription services using browser-native speech recognition technology. The Service allows you to:</p>
+    <ul>
+        <li>Transcribe audio in real-time using your device's microphone</li>
+        <li>Upload and transcribe audio files</li>
+        <li>Download and copy transcripts</li>
+        <li>Translate transcripts (feature may be in development)</li>
+    </ul>
+
+    <h2>3. Eligibility</h2>
+    <p>You must be at least 16 years old to use the Service (or 13 years old if you are located in the United States). By using the Service, you represent and warrant that you meet the age requirement for your jurisdiction and have the legal capacity to enter into these Terms.</p>
+    <p>If you are under the age of 16 (or 13 in the United States), you may only use the Service with the consent and supervision of a parent or legal guardian. Parents and guardians are responsible for their children's use of the Service.</p>
+
+    <h2>4. User Responsibilities</h2>
+    <p>You agree to:</p>
+    <ul>
+        <li>Use the Service only for lawful purposes and in accordance with these Terms</li>
+        <li>Not use the Service to transcribe content that is illegal, harmful, threatening, abusive, or violates any laws or regulations</li>
+        <li>Respect the intellectual property rights of others</li>
+        <li>Not attempt to reverse engineer, decompile, or disassemble the Service</li>
+        <li>Not use the Service in any way that could damage, disable, or impair the Service</li>
+        <li>Obtain necessary permissions before recording or transcribing conversations involving other parties</li>
+    </ul>
+
+    <div class="important">
+        <strong>Important Legal Notice:</strong> You are responsible for ensuring you have the legal right to record and transcribe any audio content. Recording conversations without consent may violate privacy laws in your jurisdiction. This includes:
+        <ul style="margin-top: 10px;">
+            <li>Obtaining consent from all parties before recording conversations (in jurisdictions requiring two-party consent)</li>
+            <li>Not recording confidential or privileged communications</li>
+            <li>Not using transcripts for illegal purposes</li>
+            <li>Complying with workplace recording policies if recording in a work environment</li>
+        </ul>
+        <p style="margin-top: 10px; margin-bottom: 0;"><strong>We are not responsible for your use of the Service in violation of applicable laws.</strong></p>
+    </div>
+
+    <h2>5. Browser Requirements and Compatibility</h2>
+    <p>The Service requires:</p>
+    <ul>
+        <li>A modern web browser that supports the Web Speech API (Chrome, Edge, or Safari)</li>
+        <li>A secure (HTTPS) connection for microphone access</li>
+        <li>Microphone permissions granted by your browser</li>
+    </ul>
+    <p>We are not responsible for browser compatibility issues or limitations of browser-native APIs.</p>
+
+    <h3>5.1 File Upload Limitations</h3>
+    <p>When uploading audio files for transcription:</p>
+    <ul>
+        <li>File size is limited to 100 megabytes (MB) per file</li>
+        <li>Only audio file formats are accepted (e.g., MP3, WAV, M4A, OGG)</li>
+        <li>Files are processed entirely within your browser and are not uploaded to our servers</li>
+        <li>Large files may cause performance issues or browser instability</li>
+    </ul>
+    <p>We reserve the right to reject or limit file uploads that exceed these limitations or pose security risks.</p>
+
+    <h2>6. Accuracy and Limitations</h2>
+    <p>You acknowledge and agree that:</p>
+    <ul>
+        <li>Transcription accuracy depends on various factors including audio quality, background noise, speaker clarity, and language</li>
+        <li>The Service uses browser-native speech recognition, which may have accuracy limitations</li>
+        <li>We do not guarantee 100% transcription accuracy</li>
+        <li>You should review and verify all transcripts for accuracy before relying on them</li>
+        <li>The Service may not support all languages or dialects</li>
+    </ul>
+
+    <h2>7. Third-Party Services</h2>
+    <p>The Service relies on browser-native APIs provided by browser vendors (Google, Microsoft, Apple, etc.). These services are subject to their own terms of service and privacy policies. We are not responsible for:</p>
+    <ul>
+        <li>The availability or performance of browser-native APIs</li>
+        <li>Changes made by browser vendors to their speech recognition services</li>
+        <li>Any data processing performed by browser vendors</li>
+    </ul>
+
+    <h2>8. Intellectual Property</h2>
+    <p>The Service, including its design, code, and functionality, is protected by copyright and other intellectual property laws. You may not:</p>
+    <ul>
+        <li>Copy, modify, or distribute the Service without permission</li>
+        <li>Use our trademarks or logos without written consent</li>
+        <li>Create derivative works based on the Service</li>
+    </ul>
+    <p>You retain all rights to transcripts and content you create using the Service.</p>
+
+    <h2>9. Disclaimers</h2>
+    <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
+    <ul>
+        <li>Warranties of merchantability</li>
+        <li>Fitness for a particular purpose</li>
+        <li>Non-infringement</li>
+        <li>Accuracy or reliability of transcriptions</li>
+        <li>Uninterrupted or error-free operation</li>
+        <li>Service availability or uptime guarantees</li>
+        <li>Compatibility with all devices or browsers</li>
+    </ul>
+    <p>We do not guarantee that the Service will be available at all times or that it will be free from errors, interruptions, or security vulnerabilities. The Service may be temporarily unavailable due to maintenance, updates, or circumstances beyond our control.</p>
+
+    <h2>10. Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR:</p>
+    <ul>
+        <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+        <li>Loss of profits, data, or other intangible losses</li>
+        <li>Damages resulting from your use or inability to use the Service</li>
+        <li>Errors or inaccuracies in transcriptions</li>
+        <li>Loss of data or transcripts</li>
+    </ul>
+    <p>Our total liability shall not exceed the amount you paid to use the Service (which is currently $0, as the Service is free).</p>
+
+    <h2>11. Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless The Note Taker and its operators from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from:</p>
+    <ul>
+        <li>Your use of the Service</li>
+        <li>Your violation of these Terms</li>
+        <li>Your violation of any rights of another party</li>
+        <li>Content you transcribe or create using the Service</li>
+    </ul>
+
+    <h2>12. Privacy</h2>
+    <p>Your use of the Service is also governed by our Privacy Policy. Please review our Privacy Policy to understand how we handle your information.</p>
+
+    <h2>13. Modifications to the Service</h2>
+    <p>We reserve the right to:</p>
+    <ul>
+        <li>Modify, suspend, or discontinue the Service at any time</li>
+        <li>Add or remove features</li>
+        <li>Change functionality or user interface</li>
+    </ul>
+    <p>We are not obligated to provide notice of such changes, though we will make reasonable efforts to do so for significant changes.</p>
+
+    <h2>14. Changes to Terms</h2>
+    <p>We may update these Terms from time to time. We will notify you of any material changes by updating the "Last Updated" date at the top of this page. Your continued use of the Service after changes are posted constitutes acceptance of the updated Terms.</p>
+
+    <h2>15. Termination</h2>
+    <p>We reserve the right to terminate or suspend your access to the Service at any time, without notice, for any reason, including violation of these Terms.</p>
+
+    <h2>16. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions. If you are located outside the United States, these Terms shall be governed by the laws of your jurisdiction to the extent required by applicable law.</p>
+
+    <h2>17. Dispute Resolution</h2>
+    <p>Any disputes arising from these Terms or your use of the Service shall be resolved through:</p>
+    <ul>
+        <li>Good faith negotiation between the parties</li>
+        <li>If negotiation fails, binding arbitration in accordance with the rules of the American Arbitration Association (AAA), conducted in California, United States</li>
+        <li>You waive any right to a jury trial or to participate in a class action lawsuit</li>
+    </ul>
+    <p>Notwithstanding the above, either party may seek injunctive relief in any court of competent jurisdiction to prevent irreparable harm.</p>
+
+    <h2>18. Severability</h2>
+    <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full effect.</p>
+
+    <h2>19. Entire Agreement</h2>
+    <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and The Note Taker regarding the Service.</p>
+
+    <h2>20. Contact Information</h2>
+    <div class="contact-info">
+        <p>If you have any questions about these Terms of Service, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:theingredientscollective@gmail.com">theingredientscollective@gmail.com</a></p>
+        <p><strong>Website:</strong> <a href="https://theingredients.io" target="_blank" rel="noopener noreferrer">theingredients.io</a></p>
+    </div>
+
+    <script>
+        function goBack() {
+            // Try to go back in history, or navigate to root
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = '/';
+            }
+        }
+
+        document.getElementById('last-updated-date').textContent = new Date().toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+    </script>
+</body>
+</html>
+

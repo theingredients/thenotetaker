@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - The Note Taker</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            font-family: inherit;
+        }
+        .back-button:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+        }
+        .back-button:active {
+            transform: translateY(0);
+        }
+        .back-button:focus {
+            outline: 2px solid #3498db;
+            outline-offset: 2px;
+        }
+        .back-button__text {
+            display: inline;
+        }
+        .back-button__icon {
+            display: none;
+            font-size: 20px;
+            line-height: 1;
+        }
+        @media (max-width: 768px) {
+            .back-button {
+                top: 15px;
+                right: 15px;
+                padding: 10px 14px;
+                min-width: 44px;
+                min-height: 44px;
+            }
+            .back-button__text {
+                display: none;
+            }
+            .back-button__icon {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="goBack()" aria-label="Go back to main page">
+        <span class="back-button__text">← Back</span>
+        <span class="back-button__icon" aria-hidden="true">×</span>
+    </button>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last Updated: <span id="last-updated-date"></span></p>
+
+    <h2>1. Introduction</h2>
+    <p>Welcome to The Note Taker ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our standalone transcription application.</p>
+
+    <h2>2. Information We Collect</h2>
+    
+    <h3>2.1 Audio Data</h3>
+    <p>Our application uses your device's microphone to capture audio for transcription purposes. This audio data is processed entirely within your browser using the Web Speech API and is never transmitted to our servers or any third-party services.</p>
+    <p><strong>Important:</strong> When using browser-native speech recognition, your audio may be processed by your browser vendor's speech recognition services (Google, Microsoft, or Apple). Please review Section 5 for more information about third-party processing.</p>
+
+    <h3>2.2 Transcript Data</h3>
+    <p>Transcripts generated from your audio are stored temporarily in your browser's memory during your session. Transcripts are not automatically saved or transmitted to us. You may choose to download transcripts to your device, which are stored locally on your device only.</p>
+    <p><strong>Warning:</strong> Transcripts may contain sensitive or confidential information. Please review transcripts carefully before downloading or copying them. We are not responsible for any disclosure of sensitive information contained in transcripts.</p>
+
+    <h3>2.3 Audio Files</h3>
+    <p>If you choose to upload audio files for transcription, these files are processed entirely within your browser. We do not upload, store, or transmit these files to any external servers. Audio files are limited to 100 megabytes (MB) in size and must be in a supported audio format.</p>
+
+    <h3>2.4 Browser Information</h3>
+    <p>Our application reads your browser's User Agent string to detect your browser type and version for compatibility checking. The User Agent string may contain information about your device, operating system, and browser version. This information is used locally within your browser and is not transmitted to our servers.</p>
+    <p><strong>Note:</strong> Under certain privacy laws (such as GDPR), User Agent strings may be considered personal data. We use this information solely for compatibility purposes and do not store or transmit it.</p>
+
+    <h3>2.5 Usage Data</h3>
+    <p>We track estimated data usage locally in your browser to help you monitor your session. This data is not transmitted to us and is cleared when you close your browser session.</p>
+
+    <h3>2.6 Clipboard Access</h3>
+    <p>When you click the "Copy" button, our application writes transcript text to your device's clipboard using the Clipboard API. We do not read from your clipboard—we only write to it when you explicitly request to copy a transcript. Clipboard access requires browser permissions, which you may grant or deny.</p>
+
+    <h3>2.7 Cookies and Local Storage</h3>
+    <p><strong>We do not use cookies or localStorage.</strong> However, we use sessionStorage solely to remember that you have accepted our Privacy Policy and Terms of Service during your browser session. This consent record is:</p>
+    <ul>
+        <li>Stored only in your browser's sessionStorage (not persistent cookies)</li>
+        <li>Automatically cleared when you close your browser tab or window</li>
+        <li>Used only to remember your consent acceptance (does not contain personal data)</li>
+        <li>Not shared with any third parties</li>
+    </ul>
+    <p>All other data exists only in your browser's memory during active sessions and is cleared when you close your browser or refresh the page.</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>Since all processing occurs locally in your browser:</p>
+    <ul>
+        <li>We do not have access to your audio recordings or transcripts</li>
+        <li>We do not store your personal information</li>
+        <li>We do not share your data with third parties</li>
+        <li>We do not use your data for advertising or marketing purposes</li>
+    </ul>
+
+    <h2>4. Browser Permissions</h2>
+    <p>Our application requires microphone access to provide transcription services. This permission is requested by your browser, and you may grant or deny it at any time through your browser settings. We only access your microphone when you explicitly start a recording session.</p>
+
+    <h2>5. Third-Party Services and International Data Transfers</h2>
+    <p>Our application uses browser-native APIs (Web Speech API and Web Audio API) provided by your browser vendor. These APIs may be subject to their own privacy policies:</p>
+    <ul>
+        <li><strong>Chrome/Edge:</strong> Google's Privacy Policy applies to Chrome's speech recognition service</li>
+        <li><strong>Safari:</strong> Apple's Privacy Policy applies to Safari's speech recognition service</li>
+    </ul>
+    <p>Please note that when using browser-native speech recognition, your audio may be processed by your browser vendor's speech recognition services. We recommend reviewing your browser vendor's privacy policy for details on how they handle audio data.</p>
+    
+    <h3>5.1 International Data Transfers</h3>
+    <p>When you use our Service, your audio data may be processed by browser vendors (Google, Microsoft, or Apple) in countries outside your jurisdiction. These browser vendors may transfer and process your data in the United States or other countries where they operate.</p>
+    <p>We do not control how browser vendors handle your data. We recommend reviewing your browser vendor's privacy policy to understand:</p>
+    <ul>
+        <li>Where your data is processed and stored</li>
+        <li>What data retention policies apply</li>
+        <li>What security measures are in place</li>
+        <li>Your rights regarding data processed by the browser vendor</li>
+    </ul>
+    <p>By using our Service, you acknowledge that your data may be transferred internationally by browser vendors in accordance with their privacy policies.</p>
+    
+    <div id="browser-privacy-link" style="margin-top: 20px; padding: 15px; background-color: #e8f4f8; border-left: 4px solid #3498db; border-radius: 4px;">
+        <p style="margin: 0 0 8px 0; font-weight: 600;">Your Browser's Privacy Policy:</p>
+        <p id="browser-privacy-text" style="margin: 0;"></p>
+    </div>
+
+    <h2>6. Translation Feature</h2>
+    <p>Currently, our translation feature is a placeholder and does not transmit data to external translation services. If this feature is implemented in the future, we will update this Privacy Policy to reflect how translation data is handled.</p>
+
+    <h2>7. Data Storage and Retention</h2>
+    <p>All data processing occurs in your browser's memory. We do not maintain servers that store your data. Transcripts and audio data exist only:</p>
+    <ul>
+        <li>In your browser's memory during active sessions</li>
+        <li>On your device if you choose to download transcripts</li>
+    </ul>
+    <p>When you close your browser or refresh the page, session data is cleared automatically.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>Since we do not collect or store your personal data, you have full control over your information:</p>
+    <ul>
+        <li>You can stop recording at any time</li>
+        <li>You can clear transcripts at any time</li>
+        <li>You can deny or revoke microphone permissions through your browser settings</li>
+        <li>You can delete downloaded transcripts from your device</li>
+        <li>You can download your transcripts (data portability)</li>
+    </ul>
+
+    <h3>8.1 GDPR Rights (European Union Users)</h3>
+    <p>If you are located in the European Union, you have the following rights under the General Data Protection Regulation (GDPR):</p>
+    <ul>
+        <li><strong>Right of Access (Article 15):</strong> You have the right to know what personal data we process. Since we do not collect or store your data, there is no data to access.</li>
+        <li><strong>Right to Rectification (Article 16):</strong> You have the right to correct inaccurate data. Since we do not store your data, you can simply correct transcripts before downloading.</li>
+        <li><strong>Right to Erasure (Article 17):</strong> You have the right to request deletion of your data. Since we do not store your data, simply clear your browser session or delete downloaded files.</li>
+        <li><strong>Right to Restrict Processing (Article 18):</strong> You can stop using the Service at any time to prevent any processing.</li>
+        <li><strong>Right to Data Portability (Article 20):</strong> You can download your transcripts at any time using the download feature.</li>
+        <li><strong>Right to Object (Article 21):</strong> You can object to processing by not using the Service or by denying microphone permissions.</li>
+        <li><strong>Right to Withdraw Consent (Article 7):</strong> You can revoke microphone permissions at any time through your browser settings.</li>
+    </ul>
+    <p><strong>Data Controller:</strong> The Ingredients Collective (theingredientscollective@gmail.com) is the data controller for this Service. However, since we do not collect or store personal data, most GDPR rights are not applicable. For data processed by browser vendors, please contact them directly.</p>
+    <p><strong>Legal Basis for Processing:</strong> Since we do not process personal data, no legal basis is required. For browser vendors processing your audio, their legal basis is governed by their privacy policies.</p>
+    <p><strong>Automated Decision-Making:</strong> We do not use automated decision-making or profiling. Browser vendors may use automated processing for speech recognition, which is governed by their privacy policies.</p>
+
+    <h3>8.2 California Privacy Rights (CCPA)</h3>
+    <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):</p>
+    <ul>
+        <li><strong>Right to Know:</strong> You have the right to know what personal information we collect. As disclosed in this policy, we do not collect or store personal information.</li>
+        <li><strong>Right to Delete:</strong> You have the right to request deletion of your personal information. Since we do not store your data, simply clear your browser session or delete downloaded files.</li>
+        <li><strong>Right to Opt-Out:</strong> We do not sell personal information. If we were to sell personal information in the future, we would provide a "Do Not Sell My Personal Information" link.</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+    </ul>
+    <p>To exercise your California privacy rights, please contact us at theingredientscollective@gmail.com.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>Our application is not intended for children under the age of 16 (or 13 in the United States). We do not knowingly collect personal information from children.</p>
+    <p><strong>Age Requirements:</strong></p>
+    <ul>
+        <li>Users must be at least 16 years old to use the Service (or 13 years old if located in the United States)</li>
+        <li>Users under 16 (or 13 in the US) may only use the Service with parental consent and supervision</li>
+        <li>Parents and guardians are responsible for their children's use of the Service</li>
+    </ul>
+    <p>If you are a parent or guardian and believe your child has used our Service without your consent, please contact us immediately at theingredientscollective@gmail.com.</p>
+    <p>We comply with the Children's Online Privacy Protection Act (COPPA) in the United States and similar laws in other jurisdictions.</p>
+
+    <h2>10. Security</h2>
+    <p>While we do not transmit or store your data on our servers, we recommend:</p>
+    <ul>
+        <li>Using our application over a secure (HTTPS) connection</li>
+        <li>Keeping your browser updated to the latest version</li>
+        <li>Reviewing your browser's privacy and security settings</li>
+        <li>Being cautious when downloading transcripts containing sensitive information</li>
+        <li>Reviewing transcripts before copying or downloading to ensure no sensitive data is exposed</li>
+    </ul>
+    <p><strong>Security Measures:</strong> Since all processing occurs in your browser, we rely on your browser's security features. We do not maintain servers that could be breached. However, you should be aware that:</p>
+    <ul>
+        <li>Browser vendors process your audio data according to their security practices</li>
+        <li>Downloaded transcripts are stored on your device and subject to your device's security</li>
+        <li>Clipboard data may be accessible to other applications on your device</li>
+    </ul>
+
+    <h3>10.1 Data Breach Notification</h3>
+    <p>Since we do not collect or store personal data on our servers, the risk of a data breach affecting our systems is minimal. However, in the unlikely event that we become aware of a security incident affecting any data we may have access to, we will:</p>
+    <ul>
+        <li>Investigate the incident promptly</li>
+        <li>Notify affected users within 72 hours (as required by GDPR) if personal data is affected</li>
+        <li>Notify relevant authorities as required by applicable law</li>
+        <li>Take steps to mitigate any harm</li>
+    </ul>
+    <p>If you become aware of a security issue, please contact us immediately at theingredientscollective@gmail.com.</p>
+
+    <h2>11. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this policy. Your continued use of the application after any changes constitutes acceptance of the updated policy.</p>
+
+    <h2>12. Service Providers and Infrastructure</h2>
+    <p>Our Service is hosted as a static website, which means:</p>
+    <ul>
+        <li>No server-side processing occurs</li>
+        <li>No personal data is stored on hosting infrastructure</li>
+        <li>Hosting providers may have access to server logs (which may include IP addresses and access times)</li>
+        <li>We may use content delivery networks (CDNs) to serve the application</li>
+    </ul>
+    <p>Hosting providers and CDNs may be located in various countries. Their privacy policies govern how they handle server logs and infrastructure data. We do not control this data, and it is not used for our Service's functionality.</p>
+    <p>If you have questions about hosting provider privacy practices, please contact us for information about which providers we use.</p>
+
+    <h2>13. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this policy. Your continued use of the application after any changes constitutes acceptance of the updated policy.</p>
+    <p>For material changes that significantly affect your rights, we will make reasonable efforts to provide additional notice, such as a prominent notice on our website or via email if we have your contact information.</p>
+
+    <h2>14. Contact Us</h2>
+    <div class="contact-info">
+        <p>If you have any questions about this Privacy Policy, wish to exercise your privacy rights, or have concerns about data processing, please contact us at:</p>
+        <p><strong>Data Controller:</strong> The Ingredients Collective</p>
+        <p><strong>Email:</strong> <a href="mailto:theingredientscollective@gmail.com">theingredientscollective@gmail.com</a></p>
+        <p><strong>Website:</strong> <a href="https://theingredients.io" target="_blank" rel="noopener noreferrer">theingredients.io</a></p>
+        <p style="margin-top: 15px; font-size: 0.9em; color: #555;">We will respond to your inquiry within 30 days as required by applicable privacy laws.</p>
+    </div>
+
+    <script>
+        function goBack() {
+            // Try to go back in history, or navigate to root
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = '/';
+            }
+        }
+
+        document.getElementById('last-updated-date').textContent = new Date().toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+
+        // Browser detection and privacy policy link
+        (function() {
+            const browserPrivacyPolicies = {
+                'Chrome / Chromium': {
+                    name: 'Chrome',
+                    url: 'https://policies.google.com/privacy',
+                    description: 'Google Chrome Privacy Policy'
+                },
+                'Microsoft Edge': {
+                    name: 'Microsoft Edge',
+                    url: 'https://privacy.microsoft.com/en-us/privacystatement',
+                    description: 'Microsoft Privacy Statement'
+                },
+                'Safari': {
+                    name: 'Safari',
+                    url: 'https://www.apple.com/privacy/',
+                    description: 'Apple Privacy Policy'
+                },
+                'Firefox': {
+                    name: 'Firefox',
+                    url: 'https://www.mozilla.org/privacy/',
+                    description: 'Mozilla Privacy Policy'
+                }
+            };
+
+            function detectBrowser() {
+                if (typeof navigator === 'undefined' || !navigator.userAgent) {
+                    return 'Unknown';
+                }
+                const ua = navigator.userAgent.toLowerCase();
+                if (ua.includes('chrome') || ua.includes('crios') || ua.includes('crmo')) {
+                    return 'Chrome / Chromium';
+                } else if (ua.includes('edg')) {
+                    return 'Microsoft Edge';
+                } else if (ua.includes('safari') && !ua.includes('chrome')) {
+                    return 'Safari';
+                } else if (ua.includes('firefox') || ua.includes('fxios')) {
+                    return 'Firefox';
+                }
+                return 'Unknown';
+            }
+
+            const browserName = detectBrowser();
+            const privacyInfo = browserPrivacyPolicies[browserName];
+            const linkContainer = document.getElementById('browser-privacy-link');
+            const textElement = document.getElementById('browser-privacy-text');
+
+            if (privacyInfo) {
+                textElement.innerHTML = `You are using <strong>${privacyInfo.name}</strong>. ` +
+                    `Please review the <a href="${privacyInfo.url}" target="_blank" rel="noopener noreferrer" style="color: #3498db; text-decoration: none; font-weight: 600;">${privacyInfo.description}</a> ` +
+                    `for information about how ${privacyInfo.name} handles audio data processed through the Web Speech API.`;
+            } else {
+                linkContainer.style.display = 'none';
+            }
+        })();
+    </script>
+</body>
+</html>
+

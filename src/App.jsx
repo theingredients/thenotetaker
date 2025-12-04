@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import Button from './components/Button'
 import SpeechTranscriber from './components/SpeechTranscriber'
 import TranscribeLater from './components/TranscribeLater'
+import ConsentModal from './components/ConsentModal'
 import { getBrowserName, getSupportMessage, isSpeechRecognitionSupported } from './utils/deviceDetection'
 
 const App = () => {
+  const [consentAccepted, setConsentAccepted] = useState(false)
   const [mode, setMode] = useState('realtime')
   const [isRecording, setIsRecording] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
@@ -14,6 +16,14 @@ const App = () => {
 
   const supportMessage = useMemo(() => getSupportMessage(), [])
   const browserName = useMemo(() => getBrowserName(), [])
+
+  // Check if consent was already accepted in this session
+  useEffect(() => {
+    const consent = sessionStorage.getItem('consent_accepted')
+    if (consent === 'true') {
+      setConsentAccepted(true)
+    }
+  }, [])
 
   const toggleRecording = () => {
     if (!isSpeechRecognitionSupported()) return
@@ -41,10 +51,34 @@ const App = () => {
   const handleFileChange = (event) => {
     const file = event.target.files?.[0]
     if (file) {
+      // File size limit: 100 MB
+      const MAX_FILE_SIZE = 100 * 1024 * 1024 // 100 MB in bytes
+      if (file.size > MAX_FILE_SIZE) {
+        alert(`File size exceeds the 100 MB limit. Please select a smaller file.`)
+        event.target.value = '' // Clear the input
+        return
+      }
+      
+      // Validate file type
+      if (!file.type.startsWith('audio/')) {
+        alert('Please select a valid audio file.')
+        event.target.value = '' // Clear the input
+        return
+      }
+
       setAudioFile(file)
       setAudioSession((prev) => prev + 1)
       setTranscript('')
     }
+  }
+
+  const handleConsentAccept = () => {
+    setConsentAccepted(true)
+  }
+
+  // Show consent modal if not accepted
+  if (!consentAccepted) {
+    return <ConsentModal onAccept={handleConsentAccept} />
   }
 
   return (
@@ -110,6 +144,26 @@ const App = () => {
           <pre>{transcript}</pre>
         </section>
       ) : null}
+
+      <footer className="app__footer">
+        <nav className="app__footer-nav" aria-label="Legal">
+          <a href="/privacy-policy.html" className="app__footer-link">
+            Privacy Policy
+          </a>
+          <span className="app__footer-separator" aria-hidden="true">
+            •
+          </span>
+          <a href="/terms-of-service.html" className="app__footer-link">
+            Terms of Service
+          </a>
+          <span className="app__footer-separator" aria-hidden="true">
+            •
+          </span>
+          <a href="https://theingredients.io" target="_blank" rel="noopener noreferrer" className="app__footer-link">
+            The Ingredients
+          </a>
+        </nav>
+      </footer>
     </main>
   )
 }
